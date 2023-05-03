@@ -1,0 +1,22 @@
+{
+  "name": "drip",
+  "version": "1.0.0",
+  "description": "Drip server pattern program.",
+  "main": "index.js",
+  "author": "Leo Brad",
+  "license": "MIT",
+  "scripts": {
+    "start": "yarn run build && node dist/index.js '{\"interval\":5000,\"minMem\":100,\"adjustCore\":0,\"ignores\":[\".drip/local/\",\".git/\",\".gitkeep\"],\"packages\":[\"[node](/tmp/drip-package-node-static/.git/)\"],\"indexLevel\":2}' '/tmp/example/' --port 3000",
+    "lint": "eslint ./src ",
+    "build": "babel src --out-dir dist"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.16.7",
+    "@babel/core": "^7.16.7",
+    "@babel/preset-env": "^7.16.7",
+    "babel-plugin-root-import": "^6.6.0",
+    "eslint": "^8.6.0",
+    "eslint-plugin-import": "^2.25.3"
+  },
+  "dependencies": {}
+}
